@@ -1,16 +1,38 @@
-# chirag_api
+# Shimmer
 
-A new Flutter project.
+[![pub package](https://img.shields.io/pub/v/shimmer.svg)](https://pub.dartlang.org/packages/shimmer) ![](https://github.com/hnvn/flutter_shimmer/workflows/unit%20test/badge.svg)
 
-## Getting Started
+A package provides an easy way to add shimmer effect in Flutter project
 
-This project is a starting point for a Flutter application.
+<p>
+    <img src="https://github.com/hnvn/flutter_shimmer/blob/master/screenshots/loading_list.gif?raw=true"/>
+    <img src="https://github.com/hnvn/flutter_shimmer/blob/master/screenshots/slide_to_unlock.gif?raw=true"/>
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+## How to use
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```dart
+import 'package:shimmer/shimmer.dart';
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+
+```dart
+SizedBox(
+  width: 200.0,
+  height: 100.0,
+  child: Shimmer.fromColors(
+    baseColor: Colors.red,
+    highlightColor: Colors.yellow,
+    child: Text(
+      'Shimmer',
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        fontSize: 40.0,
+        fontWeight:
+        FontWeight.bold,
+      ),
+    ),
+  ),
+);
+
+```
